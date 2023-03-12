@@ -1,0 +1,248 @@
+@import "./navbar.scss";
+@import "./partials/tvOrMovie.scss";
+
+@mixin flexcenter() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    .wrapper {
+        display: flex;
+        position: relative;
+
+        .slider {
+            position: relative;
+            width: 100%;
+            height: 600px;
+            overflow: hidden;
+
+            div {
+                position: absolute;
+                width: 100%;
+                height: 600px;
+                transition: all 0.1s;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        .left-icon {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: scale(3);
+            color: white;
+            z-index: 1;
+        }
+
+        .right-icon {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: scale(3);
+            color: white;
+            z-index: 1;
+
+        }
+    }
+
+    .actors-list {
+        font-size: 16px;
+
+        div {
+            display: flex;
+            background-color: rgb(218, 214, 223);
+            justify-content: space-between;
+            margin: 2em;
+            background-size: 'cover';
+            background-position: 'center';
+
+            h2 {
+                text-align: center;
+            }
+
+            a {
+                text-decoration: none;
+                margin: auto;
+            }
+
+            .img {
+                height: 70px;
+                width: 70px;
+
+
+            }
+        }
+
+    }
+}
+
+.years {
+    display: flex;
+    flex-wrap: wrap;
+
+    p {
+        margin: 0.3em;
+    }
+}
+
+
+
+.uniqueactor {
+
+    padding: 0 2em;
+
+    h1 {
+        text-align: center;
+        margin-top: 0;
+    }
+
+    div {
+        text-align: center;
+    }
+}
+
+.movieByYear {
+    background-color: rgb(209, 209, 209);
+    padding: 2em 2em;
+    margin-bottom: 2em;
+
+    p {
+        text-align: center;
+        margin-top: 0;
+    }
+
+    div {
+        text-align: center;
+    }
+}
+
+.singleMotionPicture {
+    text-align: center;
+
+    .name-image {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        div {
+            text-align: center;
+
+            img {
+                width: 60%;
+                height: 250px;
+                object-fit: cover;
+            }
+        }
+    }
+
+    p:nth-child(1) {
+        font-size: 30px;
+        margin-top: 1em;
+    }
+
+}
+
+//wishlist
+.wishlist {
+    display: flex;
+
+    .numberOrder {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+// register page
+.registerWrapper,
+.loginWrapper {
+    background-color: white;
+    height: 88vh;
+    @include flexcenter();
+
+    .form {
+        background-color: aliceblue;
+        width: 80%;
+        height: 90%;
+        margin: auto;
+        @include flexcenter();
+
+
+        form {
+            text-align: center;
+            @include flexcenter();
+            flex-direction: column;
+
+        }
+
+        input {
+            border: 0px;
+            background-color: white(247, 247, 247);
+            border-bottom: 1px black solid;
+            margin: 1em;
+            width: 250px;
+            height: 30px;
+
+        }
+
+        & :focus {
+            outline: 0;
+        }
+
+        button {
+            margin-top: 2em;
+            padding: 10px 20px;
+            background-color: gray;
+            border: none;
+            background-color: rgb(91, 183, 245);
+            color: white;
+            border-radius: 12px;
+        }
+    }
+}
+
+// login page
+/* .loginWrapper {
+    background-color: aliceblue;
+
+    .form {
+        background-color: gray;
+        width: 60%;
+        height: 60%;
+
+        input {
+            border: 0px;
+            background-color: aqua;
+            border-bottom: 1px black solid;
+        }
+    }
+} */
+
+.no-show {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.current {
+    transform: translateX(0);
+}
+
+.next {
+    transform: translateX(100%);
+}
+
+.previous {
+    transform: translateX(-100%);
+}

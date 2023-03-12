@@ -1,0 +1,78 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+}
+.navbar div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin: 0.5em;
+}
+.navbar div input {
+  height: 30px;
+  width: 250px;
+  border-radius: 12px;
+}
+.navbar .modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background-color: black;
+  z-index: 99;
+  box-shadow: rgba(255, 255, 255, 0.8) 0 0 1000px 1000px;
+}
+.navbar .modal .iconDiv {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.navbar .modal .iconDiv i {
+  height: 16px;
+  transform: scale(2);
+}
+.navbar .modal .modal-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 100px;
+}
+.navbar .modal .modal-wrapper a {
+  text-decoration: none;
+  margin: auto;
+  color: azure;
+}
+.navbar .modal .modal-wrapper h5 {
+  align-self: center;
+  text-align: center;
+}
+.navbar .modal .modal-wrapper .actors {
+  grid-column: 3/3;
+}
+.navbar .searched-terms {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  right: 0;
+  left: 0;
+  margin: auto;
+  z-index: 199;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+}
+.navbar .searched-terms p {
+  color: white !important;
+  text-decoration: none;
+}
+
+.no-show {
+  display: none !important;
+}/*# sourceMappingURL=navbar.css.map */

@@ -1,0 +1,23 @@
+.tvMovie {
+  border: 2px black solid;
+  font-weight: 600;
+}
+.tvMovie p {
+  text-align: center;
+}
+.tvMovie .underMotionPicture {
+  width: 40%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+.tvMovie button {
+  margin: 1em;
+  padding: 8px 16px;
+  border-radius: 12px;
+  background-color: rgb(243, 200, 90);
+}
+
+.tvMovie:nth-child(even) {
+  background-color: rgb(245, 245, 245);
+}/*# sourceMappingURL=tvOrMovie.css.map */

@@ -1,0 +1,93 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        margin: 0.5em;
+
+        input {
+            height: 30px;
+            width: 250px;
+            border-radius: 12px;
+        }
+
+    }
+
+    .modal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 80%;
+        height: 80%;
+        top: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        background-color: black;
+        z-index: 99;
+        box-shadow: rgba(255, 255, 255, 0.8) 0 0 1000px 1000px;
+
+        .iconDiv {
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            i {
+                height: 16px;
+                transform: scale(2);
+            }
+        }
+
+        .modal-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-auto-rows: 100px;
+
+
+            a {
+                text-decoration: none;
+                margin: auto;
+                color: azure;
+            }
+
+            h5 {
+                align-self: center;
+                text-align: center;
+            }
+
+            .actors {
+                grid-column: 3/3;
+            }
+
+        }
+    }
+
+    .searched-terms {
+        position: absolute;
+        width: 80%;
+        height: 80%;
+        right: 0;
+        left: 0;
+        margin: auto;
+        z-index: 199;
+        align-items: center;
+        flex-direction: column;
+        background-color: black;
+
+        p {
+            color: white !important;
+            text-decoration: none;
+
+        }
+    }
+}
+
+.no-show {
+    display: none !important;
+}
